@@ -1,0 +1,102 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #222;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+#app {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+#controls label {
+  margin: 0 10px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 5px;
+  border: none;
+  border-radius: 4px;
+  background: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #555;
+  cursor: not-allowed;
+}
+
+#diceContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.die {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+  background: #fff;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.die .name {
+  font-size: 0.8em;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+}
+
+.die button {
+  position: absolute;
+  bottom: 4px;
+  font-size: 0.7em;
+  display: none;
+}
+
+.die.rolling {
+  animation: roll 1s linear;
+}
+
+@keyframes roll {
+  0% { transform: rotate(0); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.flash {
+  animation: flash 1s ease-in-out 3;
+}
+
+@keyframes flash {
+  0% { background: yellow; }
+  50% { background: orange; }
+  100% { background: yellow; }
+}
+
+.hidden {
+  display: none;
+}
+
+#notification {
+  margin-top: 10px;
+  font-weight: bold;
+  height: 24px;
+}
