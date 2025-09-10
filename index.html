@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dice Roller</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <h1>Dice Roller</h1>
+    <div id="controls">
+      <label>
+        Number of Dice
+        <input type="number" id="numDice" min="1" max="25" value="1" />
+      </label>
+      <label>
+        Dice Sides
+        <select id="sides">
+          <option value="6">6-sided</option>
+          <option value="10">10-sided</option>
+        </select>
+      </label>
+      <label>
+        <input type="checkbox" id="rerollToggle" /> Allow Re-rolls
+      </label>
+      <label>
+        <input type="checkbox" id="gamblerToggle" /> Bad Gambler Mode
+      </label>
+      <button id="rollBtn">Roll</button>
+    </div>
+    <div id="rerollControls" class="hidden">
+      <button id="rerollAllBtn">Re-roll All</button>
+    </div>
+    <div id="notification"></div>
+    <div id="diceContainer"></div>
+    <div id="total"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

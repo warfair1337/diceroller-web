@@ -1,0 +1,8 @@
+{
+  "name": "diceroller-web",
+  "version": "1.0.0",
+  "description": "Interactive dice roller web app",
+  "scripts": {
+    "test": "echo \"No tests specified\""
+  }
+}
